@@ -13,11 +13,11 @@ namespace PatientVerwaltungWpf
         public DateTime Birthday { get; set; }
         public bool BedWetter { get; set; }
         public bool IsMale { get; set; }
-        public List<string> Diseases { get; set; }
+        public HashSet<string> Diseases { get; set; }
 
         public override string ToString()
         {
-            return $"{this.FirstName} {this.LastName} {this.Birthday} BedWetter:{this.BedWetter} IsMail:{this.IsMale} List:{{{string.Join(",", this.Diseases)}}}";
+            return $"{this.FirstName} {this.LastName} {this.Birthday} BedWetter:{this.BedWetter} IsMail:{this.IsMale} List:{{ { string.Join(",", this.Diseases)} }}";
         }
 
 
@@ -38,7 +38,7 @@ namespace PatientVerwaltungWpf
         {
             var patientStringList = s.Split(';');
 
-            List<string> diseaseFromCsv = new List<string>();
+            var diseaseFromCsv = new HashSet<string>();
             for (int i = 5; i < patientStringList.Length; i++)
             {
                 diseaseFromCsv.Add(patientStringList[i]);

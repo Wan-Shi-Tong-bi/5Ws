@@ -22,12 +22,9 @@ namespace PatientVerwaltungWpf
     /// </summary>
     public partial class MainWindow : Window
     {
-        private HashSet<string> listDisease;
-
        
         public MainWindow()
         {
-            listDisease = new HashSet<string>();
             InitializeComponent();
         }
 
@@ -50,7 +47,7 @@ namespace PatientVerwaltungWpf
                 BedWetter = chbBedWetter.IsChecked == true,
                 Birthday = dateBirthday.DisplayDate,
                 IsMale = RdBtnMale.IsChecked == true,
-                Diseases = listDisease.ToList()
+                Diseases = new HashSet<string>()
             };
             listPatient.Items.Add(pat);
             Label l = new Label();
@@ -90,6 +87,7 @@ namespace PatientVerwaltungWpf
             else return;
 
             listPatient.Items.Clear();
+            stpPatients.Children.Clear();
             string[] lines = File.ReadAllLines(path);
 
 
@@ -154,7 +152,23 @@ namespace PatientVerwaltungWpf
 
         private void Button_Click_Add(object sender, RoutedEventArgs e)
         {
-            listDisease.Add(cboDisease.Text);
+            try
+            {
+                Patient p = listPatient.Items.GetItemAt(listPatient.SelectedIndex) as Patient;
+                p.Diseases.Add(cboDisease.Text);
+                var index = listPatient.SelectedIndex;
+
+                listPatient.Items.RemoveAt(listPatient.SelectedIndex);
+                listPatient.Items.Insert(index, p);
+            }
+            catch (System.ArgumentOutOfRangeException)
+            {
+
+            }
+            catch (NullReferenceException)
+            {
+
+            }
         }
 
         
