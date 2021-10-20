@@ -7,69 +7,107 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="1119">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="404*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="96*"/>
             <ColumnDefinition Width="11*"/>
             <ColumnDefinition Width="289*"/>
         </Grid.ColumnDefinitions>
-        <Menu Grid.ColumnSpan="3">
+        <Menu Grid.ColumnSpan="3" Grid.RowSpan="2">
             <MenuItem Header="File">
                 <MenuItem Click ="MenuItem_Click_Open" Header="Open" ></MenuItem>
                 <MenuItem Click="MenuItem_Click_Save" Header="Save"></MenuItem>
                 <Separator/>
                 <MenuItem Header="Exit" Click="MenuItem_Click_Exit"></MenuItem>
             </MenuItem>
-
-
-
         </Menu>
-        <Button Click ="Button_Click_Add" Content="add" Margin="192,197,11,193" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-2.386"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="-0.458"/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Label Content="Firstname" HorizontalAlignment="Left" Margin="59,52,0,0" VerticalAlignment="Top"/>
-        <Label Content="Lastname" HorizontalAlignment="Left" Margin="59,95,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.408,1.947"/>
-        <Label Content="Birthday" HorizontalAlignment="Left" Margin="59,149,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.408,1.947"/>
-        <GroupBox Header="GroupBox" HorizontalAlignment="Left" Height="100" Margin="59,245,0,0" VerticalAlignment="Top" Width="100">
-            <StackPanel>
-                <RadioButton Content="Female" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <RadioButton x:Name="RdBtnMale" Content="Male" HorizontalAlignment="Left"  VerticalAlignment="Top" IsChecked="True"/>
-            </StackPanel>
-        </GroupBox>
 
-        <CheckBox x:Name="chbBedWetter" Content="Bed-wetter" HorizontalAlignment="Left" Margin="59,350,0,0" VerticalAlignment="Top"/>
+        <Grid Margin="29,3,786,257" Grid.ColumnSpan="3" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-        <DatePicker x:Name="dateBirthday" HorizontalAlignment="Left" Margin="150,151,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="3"/>
-        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Height="23" Margin="150,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="3"/>
-        <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Height="23" Margin="150,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="3"/>
+            <Label Grid.Row="0" Grid.Column="0" Content="Firstname" HorizontalAlignment="Left"  VerticalAlignment="Top"/>
+            <TextBox Grid.Column="2" x:Name="txtFirstName" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
+            <Label Grid.Row="2" Grid.Column="0" Content="Lastname" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.408,1.947" />
+            <TextBox  Grid.Row="2" Grid.Column="2" x:Name="txtLastName" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
 
+            <Label Grid.Column="0"  Content="Birthday" HorizontalAlignment="Left"  VerticalAlignment="Top" RenderTransformOrigin="0.408,1.947" Grid.Row="4"/>
+            <DatePicker x:Name="dateBirthday" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="120" Grid.Row="4" Grid.Column="2"/>
+        </Grid>
+        <Grid Grid.ColumnSpan="3" Margin="10,185,786,10" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-        <Button Click ="Button_Click_Remove" Content="Remove patient" HorizontalAlignment="Left" Margin="314,327,0,0" VerticalAlignment="Top" Width="95" Grid.Column="2"/>
-        <Button  HorizontalAlignment="Left" Margin="82,149,0,0" VerticalAlignment="Top" Width="157" Height="96" Click="Button_Click" Grid.Column="2">
+            <ComboBox x:Name="cboDisease"  Grid.Row="0" Grid.Column="0">
+                <ComboBoxItem Content="stroke"/>
+                <ComboBoxItem Content="broken leg"/>
+                <ComboBoxItem Content="not good"/>
+            </ComboBox>
+
+            <Button Click ="Button_Click_Add" Content="add"  Grid.ColumnSpan="3" RenderTransformOrigin="0.066,1.01" Grid.Row="0" Grid.Column="2"/>
+
+            <GroupBox Grid.Column="0" Grid.Row="2" Header="GroupBox" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100" >
+                <StackPanel>
+                    <RadioButton Content="Female" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="RdBtnMale" Content="Male" HorizontalAlignment="Left"  VerticalAlignment="Top" IsChecked="True"/>
+                </StackPanel>
+            </GroupBox>
+
+            <CheckBox x:Name="chbBedWetter" Content="Bed-wetter" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="4" Grid.Column="0"/>
+        </Grid>
+
+        <Button  HorizontalAlignment="Left" Margin="82,134.197,0,0" VerticalAlignment="Top" Width="157" Height="96" Click="Button_Click" Grid.Column="2" Grid.Row="1">
             <Button.Content>
                 <Image HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="155" Source="Arrow.png"/>
             </Button.Content>
 
         </Button>
-        <ListBox x:Name="listPatient"  HorizontalAlignment="Left" Height="247" Margin="277,52,0,0" VerticalAlignment="Top" Width="291" Grid.Column="2"/>
-        <ComboBox x:Name="cboDisease" Margin="29,198,110,194">
-            <ComboBoxItem Content="stroke"/>
-            <ComboBoxItem Content="broken leg"/>
-            <ComboBoxItem Content="not good"/>
 
-        </ComboBox>
-        <Button Click ="Button_Click_Remove_All" Content="Remove all" HorizontalAlignment="Left" Margin="451,325,0,0" VerticalAlignment="Top" Width="95" Grid.Column="2"/>
+        <Grid Grid.Column="2" Margin="264,22,254,31" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="247"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <ListBox x:Name="listPatient"  HorizontalAlignment="Left" Height="247"  VerticalAlignment="Top" Width="291" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"/>
+            <Button  Click ="Button_Click_Remove" Content="Remove patient" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="95" Grid.Column="0" Grid.Row="2"/>
+            <Button Click ="Button_Click_Remove_All" Content="Remove all" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="95" Grid.Column="2" Grid.Row="2"/>
+        </Grid>
 
-        <GroupBox Header="Patients&#xD;&#xA;" Grid.Column="2" Margin="594,56,19,120">
+        <GroupBox Header="Patients&#xD;&#xA;" Grid.Column="2" Margin="594,41.197,19,120" Grid.Row="1">
             <StackPanel x:Name="stpPatients">
-                
+
             </StackPanel>
         </GroupBox>
     </Grid>
