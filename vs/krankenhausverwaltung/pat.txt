@@ -1,0 +1,5 @@
+187;Fred;Feuerstein;AUGEN;kopfAua;Bannane
+184;Markus;Mustermann;AUGEN;auaBuach
+181;Fred;Feuerstein;INNERE;
+1;Fred;Feuerstein;INNERE;kopfaua
+2;Fred;Feuerstein;HNO;kopfaua;bannane

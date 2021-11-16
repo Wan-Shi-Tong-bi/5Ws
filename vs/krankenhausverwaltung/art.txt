@@ -1,0 +1,7 @@
+Fred;Dracken;AUGEN
+Franz;Servus;AUGEN
+Mayer;Hof;HNO
+Jonas;Wimmer;HNO
+Andereas;Sperrer;INNERE
+Rimuru;Tempest;INNERE
+Son;Goku;INNERE
