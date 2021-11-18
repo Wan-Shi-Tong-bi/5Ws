@@ -22,7 +22,7 @@ namespace PatientVerwaltungWpf
     /// </summary>
     public partial class MainWindow : Window
     {
-       
+
         public MainWindow()
         {
             InitializeComponent();
@@ -96,7 +96,7 @@ namespace PatientVerwaltungWpf
                 Patient p;
                 Patient.TryParse(line, out p);
                 listPatient.Items.Add(p);
-                
+
                 stpPatients.Children.Add(new Label { Content = p.ToStringName(), Background = new SolidColorBrush(Colors.Red) });
             }
         }
@@ -118,22 +118,22 @@ namespace PatientVerwaltungWpf
 
                 Patient p = listPatient.Items.GetItemAt(listPatient.SelectedIndex) as Patient;
 
-                
+
                 listPatient.Items.RemoveAt(listPatient.SelectedIndex);
 
                 Label labelToDelete = null;
+
                 foreach (var item in stpPatients.Children)
                 {
                     Label l = item as Label;
                     if (l != null)
-                    {
-                        if(l.Content.Equals(p.ToStringName()))
+                        if (l.Content.Equals(p.ToStringName()))
                         {
                             labelToDelete = l;
                             break;
                         }
-                    }
-                    
+
+
                 }
                 stpPatients.Children.Remove(labelToDelete);
 
@@ -171,6 +171,6 @@ namespace PatientVerwaltungWpf
             }
         }
 
-        
+
     }
 }

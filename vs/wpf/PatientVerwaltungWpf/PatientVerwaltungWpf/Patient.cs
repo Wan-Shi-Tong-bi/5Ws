@@ -30,7 +30,7 @@ namespace PatientVerwaltungWpf
             string listCsv = "";
             foreach (var item in this.Diseases)
             {
-                listCsv += item+";";
+                listCsv += item + ";";
             }
             return $"{this.FirstName};{this.LastName};{this.Birthday};{this.BedWetter};{this.IsMale};{listCsv}";
         }

@@ -119,6 +119,8 @@ namespace Tacho
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            List<int> a = new List<int> { 2, 3, 4, 5 };
+            var z = a.Count;
         }
 
         private void cavTacho_SizeChanged(object sender, SizeChangedEventArgs e)
