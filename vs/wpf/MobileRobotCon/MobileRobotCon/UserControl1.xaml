@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="MobileRobotCon.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MobileRobotCon"
+             mc:Ignorable="d" Height="481.364" Width="171">
+    <DockPanel Background="White">
+        <GroupBox x:Name="gbHeader" Width="150" Header="" DockPanel.Dock="Left">
+            <DockPanel> 
+                <Slider x:Name="sliBackFor"  ValueChanged="sliBackFor_ValueChanged" Minimum="-1" Maximum="1" Orientation="Vertical"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="150"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="150"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Background="White" x:Name="btnForward" Click="btnForward_Click">
+                        <Image Source="/Icons/fast-forward-button.jpg"></Image>
+                        <Button.LayoutTransform>
+                            <RotateTransform Angle="-90"/>
+                        </Button.LayoutTransform>
+                    </Button>
+                    <ProgressBar MouseDown="proForward_MouseDown" x:Name="proForward" Orientation="Vertical" Grid.Row="1" Maximum="1" />
+                    <Label VerticalAlignment="Center" Content="Forward" Grid.Row="1"  Grid.Column="1" Margin="0,45" Grid.RowSpan="2">
+                        <Label.LayoutTransform>
+                            <RotateTransform Angle="90"/>
+                        </Label.LayoutTransform>
+                    </Label>
+                    <Button Background="White" x:Name="btnStop" Click="btnStop_Click" Grid.Row="2">
+                        <Image Source="/Icons/stopbutton.jpg"/>
+                    </Button>
+                    <Label VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" Content="0%"/>
+                    <ProgressBar MouseDown="proBack_MouseDown" x:Name="proBack" Orientation="Vertical" Grid.Row="3" Maximum="1">
+                        <ProgressBar.LayoutTransform>
+                            <RotateTransform Angle="180"/>
+                        </ProgressBar.LayoutTransform>
+                    </ProgressBar>
+                    <Label VerticalAlignment="Center" Content="Backward" Grid.Row="3"  Grid.Column="1" Margin="0,45" Grid.RowSpan="2">
+                        <Label.LayoutTransform>
+                            <RotateTransform Angle="90"/>
+                        </Label.LayoutTransform>
+                    </Label>
+                    <Button Background="White" x:Name="btnBack" Click="btnBack_Click" Grid.Row="5">
+                        <Image Source="/Icons/fast-forward-button.jpg"></Image>
+                        <Button.LayoutTransform>
+                            <RotateTransform Angle="90"/>
+                        </Button.LayoutTransform>
+                    </Button>
+                </Grid>
+            </DockPanel>
+        </GroupBox>
+    </DockPanel>
+</UserControl>

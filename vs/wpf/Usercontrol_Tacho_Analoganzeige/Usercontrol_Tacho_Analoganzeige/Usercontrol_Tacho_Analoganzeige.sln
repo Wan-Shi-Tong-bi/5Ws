@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30711.63
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Usercontrol_Tacho_Analoganzeige", "Usercontrol_Tacho_Analoganzeige.csproj", "{B0405157-45EB-452F-A7E8-8303B43982EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsercontrolTacho", "..\UsercontrolTacho\UsercontrolTacho.csproj", "{7BF3F275-D233-430F-B4F2-EC5B9B72170A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0405157-45EB-452F-A7E8-8303B43982EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0405157-45EB-452F-A7E8-8303B43982EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0405157-45EB-452F-A7E8-8303B43982EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0405157-45EB-452F-A7E8-8303B43982EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BF3F275-D233-430F-B4F2-EC5B9B72170A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BF3F275-D233-430F-B4F2-EC5B9B72170A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BF3F275-D233-430F-B4F2-EC5B9B72170A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BF3F275-D233-430F-B4F2-EC5B9B72170A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4294CBFB-43DF-45D0-BAD3-355A6BA9A342}
+	EndGlobalSection
+EndGlobal
