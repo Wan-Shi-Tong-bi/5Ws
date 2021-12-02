@@ -71,3 +71,11 @@
 - informationstechnik & Wirtschaftsinformatik Studienplatz: study. work. support: unternehmen (auch red bull) stellen ein
 - lassen package zukommen, ist separat von studium übernehmen dann z.b studiengebühren 10 std praktikum etc. 
 - Lehrveranstaltungen können für HTL-Absolvent angerechnet werden/ auch möglichkeit ins 3. Semester einzusteigen
+
+## UNI Salzburg
+-	Bechler allgemein gehalten 
+-	Man bekommt überall einen Einblick 
+-	Wirtschaftsinformatik nicht so gut, weil beides kann man dann nicht so gut 
+-	Mann kann sich was anrechnen lassen (HTL)
+-	Compilerbau und Systemenginiering
+-	Informatik und Digitalisierung Gänge; computer science 
