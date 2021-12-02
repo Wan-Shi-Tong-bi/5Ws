@@ -79,3 +79,12 @@
 -	Mann kann sich was anrechnen lassen (HTL)
 -	Compilerbau und Systemenginiering
 -	Informatik und Digitalisierung Gänge; computer science 
+
+## RZL
+- C# und .NET Entwicklung
+- Rechnungswesensoftware
+- Familienunternehmen
+- sehr viele gemeinsamen Aktivitäten
+- Bewerbung, Einladung persönliches Gespräch, 2 Einladung zum Scrum Team
+- nähe Ried i. I 
+
