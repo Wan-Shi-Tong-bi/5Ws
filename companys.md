@@ -73,7 +73,7 @@
 - Lehrveranstaltungen können für HTL-Absolvent angerechnet werden/ auch möglichkeit ins 3. Semester einzusteigen
 
 ## UNI Salzburg
--	Bechler allgemein gehalten 
+-	Bachelor allgemein gehalten 
 -	Man bekommt überall einen Einblick 
 -	Wirtschaftsinformatik nicht so gut, weil beides kann man dann nicht so gut 
 -	Mann kann sich was anrechnen lassen (HTL)
