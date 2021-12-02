@@ -66,3 +66,8 @@
 - in mindeststudienzeit durch
 - kannst stundenplan nicht selber machen / wird vorgegeben
 - gibt aufnahmevorfahren
+
+## fh salzburg
+- informationstechnik & Wirtschaftsinformatik Studienplatz: study. work. support: unternehmen (auch red bull) stellen ein
+- lassen package zukommen, ist separat von studium übernehmen dann z.b studiengebühren 10 std praktikum etc. 
+- Lehrveranstaltungen können für HTL-Absolvent angerechnet werden/ auch möglichkeit ins 3. Semester einzusteigen
